@@ -1,43 +1,69 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<html lang="en">
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, minimal-ui" />
-    <meta name="description" content="Subway Surfers game" />
-    <link rel="icon" href="./NewYorkIcon.png" />
+<head>
+    <title>Eaglercraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <style>
-      body {
-        background-color: #000000;
-        margin: 0;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      }
+        @import url("https://fonts.googleapis.com/css?family=Raleway:400,700,700i");
+        @import url("https://cdn.jsdelivr.net/gh/ROMVoid95/DiscordFonts@master/fontface.css");
 
-      .fontcache {
-        position: fixed;
-        margin-left: -100px;
-      }
+        * {
+            box-sizing: border-box;
+        }
 
-      #og-game-holder {
-        position: fixed;
-        overflow: hidden;
-        width: 100%;
-        height: 100vh;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin: 0;
-      }
+        body {
+            font-family: "Raleway", sans-serif;
+            background: linear-gradient(0deg,
+                    rgba(200, 139, 58, 0.5),
+                    rgba(200, 139, 58, 0.3)),
+                url("https://cdn.glitch.com/161fba10-08d4-4007-b3c4-cf3478168729%2Fbg-galaxy3-6.png?1557025303102");
+            background-attachment: fixed;
+            background-color: rgba(200, 139, 58, 0.5);
+        }
+
+        .form-control {
+            background-color: black;
+            color: white;
+        }
+
+        .btn {
+            background-color: rgb(255, 165, 91);
+        }
+
+        .btn:hover {
+            background-color: rgb(139, 68, 10);
+        }
+
+        .middle {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
     </style>
-    <title>Subway Surfers New York | topVAZ</title>
-    <script src="js/games_lib/ludiAdapter.js" charset="utf-8"></script>
-  </head>
+</head>
 
-  <body>
-    <div id="og-game-holder"></div>
-    <script src="js/boot.js"></script>
-    <script src="/js/main.js"></script>
-  </body>
+<body>
+
+    <div id="filler" style="visibility: visible;">
+        <div class="middle">
+            <div class="form-group">
+                <h2 style="color:white;">Select version:</h2>
+                <select class="form-control" style="width:unset;display:inline;" id="dropDown">
+                    <option value="https://imadejptr.github.io/strg/eaglercraft/1.8.8/index.html" selected>EaglercraftX 1.8.8</option>
+                    <option value="https://imadejptr.github.io/strg/eaglercraft/1.5.2/index.html">
+                        Eaglercraft 1.5.2</option>
+                </select><button class="btn btn-primary" style="margin-top:-4px;margin-left:4px;" id="start"
+                    onclick="loadGame();">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/load.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
 </html>
